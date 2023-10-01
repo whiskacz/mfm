@@ -1,0 +1,21 @@
+:root{
+  --myColor100: #CAF0F8;
+  --myColor200: #90E0EF;
+  --myColor300: #00B4D8;
+  --myColor400: #0077B6;
+  --myColor500: #03045E;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainWrapper{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}

@@ -1,15 +1,15 @@
 import { createRoot } from 'react-dom/client';
-import DecryptFunction from './components/DecryptFunction';
+import { LoginPage } from './components/LoginPage';
+import './mainCSS/mainCSS.css'
+
 
 
 const Mfm = () => {
     return(
-        <>
-        <div>
-        mfm
-        </div>
-        <DecryptFunction />
-        </>
+        <main className='mainWrapper'>
+            
+        <LoginPage />
+        </main>
     )
 }
 
