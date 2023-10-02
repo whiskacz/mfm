@@ -12,6 +12,9 @@ module.exports = {
         myColor400: '#0077B6',
         myColor500: '#03045E',
       },
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif'],
+      },
     },
   },
   plugins: [],
