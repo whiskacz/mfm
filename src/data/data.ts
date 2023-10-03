@@ -1,1 +1,8 @@
-export const ean13: number | null | undefined = 5900398026864
+import { LoginType } from "../interfaces/interfaces"
+
+export const loginData: LoginType[] = [
+    {
+        username: "Pawel",
+        password: "12345"
+    }
+]

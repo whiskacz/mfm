@@ -1,3 +1,4 @@
-export interface Ean13 {
-    
+export interface LoginType {
+    username: string;
+    password: string;   
 }
