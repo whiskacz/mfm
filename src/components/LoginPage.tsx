@@ -1,10 +1,14 @@
 import '../index.css';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useContext } from 'react';
 import logoSmall from '../images/logoSmall.png';
 import { LoginType } from '../interfaces/interfaces';
+import { LoginContext } from '../context/LoginContext';
+
 
 
 export const LoginPage: React.FC = () => {
+
+    const loginData = useContext(LoginContext)
 
     const[credentials, setCredentials] = useState<LoginType>({
         username:'',
@@ -13,8 +17,13 @@ export const LoginPage: React.FC = () => {
 
     const {username, password} = credentials
 
-    const handleLogin = () => {    
-    }
+    const handleLogin = () => {  
+        
+        loginData.map((element) => 
+            console.log(element.username)
+            
+        )}
+    
 
     const focusPlaceHolder = useRef<HTMLInputElement | null>(null)
 

@@ -4,12 +4,11 @@ import './mainCSS/mainCSS.css'
 import { LoginContextProvider } from './context/LoginContext';
 
 
-
 const Mfm = () => {
     return(
         <main className='mainWrapper'>
         <LoginContextProvider>
-        <LoginPage />
+            <LoginPage />
         </LoginContextProvider>    
         </main>
     )

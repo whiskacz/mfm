@@ -1,6 +1,4 @@
-import { LoginType } from "../interfaces/interfaces"
-
-export const loginData: LoginType[] = [
+export const loginData = [
     {
         username: "Pawel",
         password: "12345"

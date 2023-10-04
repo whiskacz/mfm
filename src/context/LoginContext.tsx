@@ -1,13 +1,11 @@
-import React, { createContext, useContext} from 'react';
-import { LoginType } from '../interfaces/interfaces';
-import { loginData } from '../data/data';
-
-const LoginContext = createContext<LoginType | undefined>(undefined)
+import { createContext } from 'react';
+import { DataContextType } from '../interfaces/interfaces';
+import { loginData } from '../data/data'
 
 
-export const LoginProvider: React.FC = () => {
+export const LoginContext = createContext(loginData)
 
-
-    return <LoginContext.Provider value={{loginData:LoginType}}/>
-
-}
+export const LoginContextProvider = ({
+    children}: DataContextType) => {
+        return <LoginContext.Provider value={loginData}>{children}</LoginContext.Provider>
+    }
