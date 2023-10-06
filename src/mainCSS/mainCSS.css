@@ -19,3 +19,23 @@
   display: grid;
   place-items: center;
 }
+
+.loginAddWrapper{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  filter: blur(5px);
+}
+
+.loginAddWindow{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 50vw;
+  height: 40vh;
+  border-radius: 20px;
+  background-color: var(--myColor100);
+  border: 2px solid var(--myColor500);
+}
