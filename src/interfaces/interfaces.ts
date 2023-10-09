@@ -5,3 +5,7 @@ export interface LoginType {
 export type DataContextType = {
     children: React.ReactNode
 }
+export interface LoginAddProps {
+    handleLoginAdd: () => void;
+    dataUpdate: (newState: LoginType[]) => void;
+}

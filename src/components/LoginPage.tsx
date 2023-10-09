@@ -6,7 +6,7 @@ import { LoginContext } from '../context/LoginContext';
 
 
 
-export const LoginPage: React.FC = () => {
+export const LoginPage: React.FC<{handleLoginAdd: () =>void}> = ( {handleLoginAdd} ) => {
 
     const loginData = useContext(LoginContext)
 
@@ -59,7 +59,7 @@ export const LoginPage: React.FC = () => {
             <span className='text-white text-xl font-roboto text-center'>
                 Sign up and taste my app!
             </span>
-            <button className='m-2 text-myColor400 w-[170px] h-[40px] bg-white rounded-full font-roboto'>
+            <button onClick={handleLoginAdd} className='m-2 text-myColor400 w-[170px] h-[40px] bg-white rounded-full font-roboto'>
                     Sign up
             </button>
         </div>
