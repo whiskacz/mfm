@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { LoginPage } from './components/LoginPage';
 import { LoginAdd } from './components/LoginAdd';
 import { LoginContextProvider } from './context/LoginContext';
+import { FilmMenu } from './components/FilmMenu';
 import { LoginType } from './interfaces/interfaces';
 import { loginData } from './data/data';
 import axios from 'axios';
@@ -37,20 +38,24 @@ const Mfm = () => {
 
 
     return(
-        <main className='mainWrapper'>
-        <LoginContextProvider>
-            <LoginPage 
-            handleLoginAdd={handleLoginAdd} 
+      <>
+        <FilmMenu />
+
+        {/* // <main className='mainWrapper'>
+        // <LoginContextProvider>
+        //     <LoginPage 
+        //     handleLoginAdd={handleLoginAdd} 
             
-            />
+        //     />
             
-            {loginAddShow && <LoginAdd 
-            handleLoginAdd={handleLoginAdd} 
-            dataUpdate={dataUpdate}
-            />}
-        </LoginContextProvider>    
-        </main>
-    )
+        //     {loginAddShow && <LoginAdd 
+        //     handleLoginAdd={handleLoginAdd} 
+        //     dataUpdate={dataUpdate}
+        //     />}
+        // </LoginContextProvider>    
+        // </main> */}
+        </>  
+        )
 }
 
 const root = createRoot(document.getElementById('root')!);

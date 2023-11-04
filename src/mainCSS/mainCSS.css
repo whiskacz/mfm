@@ -89,3 +89,10 @@
   font-size: 3rem;
   cursor: pointer;
 }
+
+.mainFilmWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
