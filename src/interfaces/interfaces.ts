@@ -9,3 +9,7 @@ export interface LoginAddProps {
     handleLoginAdd: () => void;
     dataUpdate: (newState: LoginType[]) => void;
 }
+
+// export interface MovieDetails {
+
+// }

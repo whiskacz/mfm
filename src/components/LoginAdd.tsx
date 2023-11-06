@@ -24,8 +24,6 @@ export const LoginAdd: React.FC<LoginAddProps> = ( {handleLoginAdd, dataUpdate} 
       
       sendData();
       
-
-      
     }
   
     const[newUser, setNewUser] = useState<LoginType>({

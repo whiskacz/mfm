@@ -1,9 +1,9 @@
 import React from 'react'
-import '../mainCSS/mainCSS.css'
 
-export const FilmMenu = () => {
+export const FilmSearch = () => {
   return (
-    <main className='FilmMenuWrapper'>
+    <>
+    <main className='filmMenuWrapper'>
         <div className='filmInput moduls'>
           <input type="text" />
           <label>Enter film name</label>  
@@ -13,5 +13,6 @@ export const FilmMenu = () => {
         </div>
 
     </main>
+    </>
   )
 }

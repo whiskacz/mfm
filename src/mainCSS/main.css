@@ -91,7 +91,7 @@
   cursor: pointer;
 }
 
-.FilmMenuWrapper {
+.filmMenuWrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -148,4 +148,12 @@
   background-color: var(--myColor100);
   flex: 1;
   width: 100%;
+}
+
+.filmNavbarMain {
+  display: flex;
+  flex-direction: row;
+  min-height: 15vh;
+  width: 100%;
+  margin: 2vh auto;
 }

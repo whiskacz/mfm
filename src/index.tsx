@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import { createRoot } from 'react-dom/client';
-import { LoginPage } from './components/LoginPage';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { LoginPage } from './pages/LoginPage';
 import { LoginAdd } from './components/LoginAdd';
 import { LoginContextProvider } from './context/LoginContext';
-import { FilmMenu } from './components/FilmMenu';
+import { FilmMenu } from './pages/FilmMenu';
 import { LoginType } from './interfaces/interfaces';
 import { loginData } from './data/data';
 import axios from 'axios';
-import './mainCSS/mainCSS.css'
-
+import './mainCSS/main.css'
  
 
 const Mfm = () => {
@@ -38,24 +38,26 @@ const Mfm = () => {
 
 
     return(
-      <>
-        <FilmMenu />
+      <Router>
+        <Routes>
+          <Route path='/' element={<FilmMenu />} />
 
-        {/* // <main className='mainWrapper'>
-        // <LoginContextProvider>
-        //     <LoginPage 
-        //     handleLoginAdd={handleLoginAdd} 
-            
-        //     />
-            
-        //     {loginAddShow && <LoginAdd 
-        //     handleLoginAdd={handleLoginAdd} 
-        //     dataUpdate={dataUpdate}
-        //     />}
-        // </LoginContextProvider>    
-        // </main> */}
-        </>  
-        )
+           <main className='mainWrapper'>
+           <LoginContextProvider>
+               <LoginPage 
+               handleLoginAdd={handleLoginAdd} 
+              
+               />
+              
+               {loginAddShow && <LoginAdd 
+              handleLoginAdd={handleLoginAdd} 
+               dataUpdate={dataUpdate}
+              />}
+           </LoginContextProvider>    
+           </main>
+        </Routes>
+      </Router>  
+      )
 }
 
 const root = createRoot(document.getElementById('root')!);
